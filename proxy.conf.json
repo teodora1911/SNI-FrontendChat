@@ -1,0 +1,10 @@
+{
+    "/posts": {
+      "target": "https://10.99.164.64:8443",
+      "secure": true,
+      "pathRewrite": {
+      "^/posts": ""
+    },
+      "changeOrigin": true
+    }
+  }

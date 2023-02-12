@@ -1,0 +1,82 @@
+.main-container {
+    font-family: monospace;
+    width: 100%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 100%;
+    height: 150px;
+}
+
+.selection-container {
+    margin-top: 25px;
+    width: 20%;
+    text-align: center;
+}
+
+select {
+    width: 150px;
+    height: 40px;
+    border: solid 2px lightgray;
+}
+
+.select-option {
+    height: 40px;
+    border: solid 1px #222831;
+}
+
+.select-option:hover {
+    background-color: transparent;
+}
+
+.message-container {
+    width: 70%;
+    text-align: center;
+}
+
+.logout-button-container {
+    width: 10%;
+}
+
+.logout-button {
+    width: 80px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: #EE0101;
+    margin-top: 5px;
+}
+
+.input-style {
+    width: 70%;
+    height: 40px;
+    border: solid 2px lightgray;
+    padding-left: 10px;
+}
+
+.button-style {
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #222831;
+    color: #eeeeee;
+}
+
+.messages-div {
+    padding: 10px;
+    width: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.txt-left {
+    text-align: left;
+    padding-left: 10px;
+}

@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["sockjs-client", "stompjs"],
             "outputPath": "dist/chatroom",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -66,7 +67,14 @@
               "browserTarget": "chatroom:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "sslKey": "ssl/client-private.key",
+            "sslCert": "ssl/client.crt",
+            "ssl": true,
+            "host": "signaintchat.com",
+            "port": 4200
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -94,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c215da37-57ed-474b-a10a-5952fd99afe1"
   }
 }

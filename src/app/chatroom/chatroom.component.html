@@ -1,0 +1,31 @@
+<div class="main-container">
+    <div class="form-container">
+        <div class="selection-container">
+            <select (change)="selectUser($event)">
+                <option class="select-option" *ngFor="let participant of participants()" [value]="participant">{{participant}}</option>
+            </select>
+        </div>
+        <div class="message-container">
+            <!--<h6>{{selected}}</h6>-->
+            <br>
+            <form [formGroup]="form">
+                <input type="text" placeholder="Enter text here..."
+                        formControlName="content"
+                        class="input-style"/>
+                <br><br>
+                <button class="button-style" [disabled]="form.invalid" (click)="sendMessage(form)">Send</button>
+            </form>
+        </div>
+        <div class="logout-button-container">
+            <button class="logout-button" (click)="logout()">LOGOUT</button>
+        </div>
+    </div>
+    <hr><hr>
+    <div class="messages-div">
+        <div class="w-100 txt-left" *ngFor="let message of messages()">
+            <div class="w-100 txt-left">Sender: {{message.sender}}</div>
+            <div class="w-100 txt-left">Content: {{message.content}}</div>
+            <hr>
+        </div>
+    </div>
+</div>
